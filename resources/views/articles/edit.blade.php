@@ -1,12 +1,12 @@
 @extends('layout')
 
-@section('head')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-@endsection
+{{--@section('head')--}}
+{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">--}}
+{{--@endsection--}}
 
 @section('content')
 
-    <div id="wrapper">
+    <div id="wrapper"  style="margin: 45px auto 20px;">
         <div id="page" class="container">
             <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
 
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="field is-grouped">
-                    <div class="control">
+                    <div class="control"  style="margin-top: 10px;">
                         <button class="button is-link" type="submit">Submit</button>
                     </div>
                 </div>

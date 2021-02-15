@@ -1,17 +1,14 @@
 @extends('layout')
 
 @section('content')
-    <div id="wrapper">
-        <div id="page" class="container">
-            @foreach ($articles as $article)
-            <div id="content">
-                <div class="title">
-                    <h2><a href="{{ $article->path() }}">{{ $article->title }}</a></h2>
-                <p><img src="/images/banner.jpg" alt="" class="image image-full" /> </p>
+    <section class="column is-two-thirds ld-top" style="margin-top: 80px;">
+        @foreach($articles as $article)
+        <article class="notification">
+            <h1 class="title is-4"><a style="text-decoration: none;" href="{{ $article->path() }}">{{ $article->title }}</a></h1>
+            <p class="subtitle is-6"><img src="/images/banner.jpg" alt="" class="image image-full" />
                 {!! $article->excerpt !!}
-            </div>
-            @endforeach
-        </div>
-    </div>
-
+            </p>
+        </article>
+        @endforeach
+    </section>
 @endsection
