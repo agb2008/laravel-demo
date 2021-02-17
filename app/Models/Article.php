@@ -18,6 +18,18 @@ class Article extends Model
 
     public function user()
     {
+        return $this->belongsTo(User::class);
+    }
 
+    public function author()
+    {
+        return $this->belongsTo(User::class,'user_id')->withDefault([
+            'name' => 'Guest Author'
+        ]);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class)->withTimestamps();
     }
 }

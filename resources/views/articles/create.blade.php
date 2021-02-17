@@ -49,8 +49,26 @@
                     id="body"
                     class="textarea @error('body') is-danger @enderror"
                 >{{ old('body') }}</textarea>
-                @error('excerpt')
+                @error('body')
                     <p class="help is-danger">{{ $errors->first('body') }}</p>
+                @enderror
+            </div>
+
+            <div class="field">
+                <label for="tag" class="label">Tags</label>
+            </div>
+            <div class="select is-multiple control">
+                <select
+                    name="tags[]"
+                    id="tag"
+                    multiple
+                >
+                    @foreach ($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                    @endforeach
+                </select>
+                @error('tags')
+                <p class="help is-danger">{{ $message }}</p>
                 @enderror
             </div>
 
