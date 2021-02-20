@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar is-light is-fixed-top nav-set" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="/">
             <img src="/images/laravel-demo.png" width="112" height="28">
         </a>
 
@@ -27,7 +27,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item {{ Request::path() === '/' ? 'current_page_item' : ''}}" href="/" accesskey="1" title="">Homepage</a>
+            <a class="navbar-item {{ Request::path() === '/' ? 'current_page_item' : ''}}" href="/home" accesskey="1" title="">Homepage</a>
             <a class="navbar-item {{ Request::path() === 'clients' ? 'current_page_item' : ''}}" href="#" accesskey="2" title="">Our client</a>
             <a class="navbar-item {{ Request::path() === 'about' ? 'current_page_item' : ''}}" href="/about" accesskey="3" title="">About us</a>
             <a class="navbar-item {{ Request::path() === 'articles' ? 'current_page_item' : ''}}" href="/articles" accesskey="4" title="">Articles</a>
@@ -44,12 +44,28 @@
         </div>
 
         <div class="navbar-end">
+            @if (Auth::guest())
             <div class="navbar-item">
                 <div class="buttons">
-                    <a class="button is-primary"><strong>Sign up</strong></a>
-                    <a class="button is-light">Log in</a>
+                    <a class="button is-primary" href="{{ route('register') }}"><strong>Register</strong></a>
+                    <a class="button is-light" href="{{ route('login') }}">Log in</a>
                 </div>
             </div>
+            @else
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 </nav>
@@ -57,6 +73,8 @@
 
 @yield('content')
 
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
 </body>
 <footer class="footer is-light">
     <div id="copyright" class="content has-text-centered">

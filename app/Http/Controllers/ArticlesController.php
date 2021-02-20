@@ -46,7 +46,7 @@ class ArticlesController extends Controller
     {
         $this->validateArticle();
         $article = new Article(request(['title','excerpt','body']));
-        
+
         $article->user_id = 1; // auth()->id() or auth()->user()->articles()->create($article)
         $article->save();
 
