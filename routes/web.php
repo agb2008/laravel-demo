@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,11 @@ Route::get('/articles/create', [ArticlesController::class, 'create']);
 Route::get('/articles/{article}', [ArticlesController::class, 'show'])->name('articles.show');
 Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
 Route::put('/articles/{article}', [ArticlesController::class, 'update']);
+
+Route::get('/forms', [FormController::class, 'index'])->name('forms.index');
+Route::post('/forms', [FormController::class, 'store']);
+Route::get('/forms/create', [FormController::class, 'create']);
+Route::get('/forms/{form}', [FormController::class, 'show'])->name('forms.show');
 
 Auth::routes();
 
