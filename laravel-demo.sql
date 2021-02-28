@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 20 2021 г., 18:45
+-- Время создания: Фев 28 2021 г., 19:07
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.14
 
@@ -106,6 +106,29 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `forms`
+--
+
+DROP TABLE IF EXISTS `forms`;
+CREATE TABLE `forms` (
+  `id` bigint UNSIGNED NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `forms`
+--
+
+INSERT INTO `forms` (`id`, `username`, `comment`, `created_at`, `updated_at`) VALUES
+(1, 'Ivan Ivanov', 'Just a new comment', '2021-02-25 10:33:28', '2021-02-25 10:33:28'),
+(2, 'Sergey Sergeev', 'Это еще один комментарий к данной публикации', '2021-02-25 11:42:45', '2021-02-25 11:42:45');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `migrations`
 --
 
@@ -125,7 +148,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2021_02_10_153900_create_articles_table', 1),
-(5, '2021_02_17_122130_create_tags_table', 1);
+(5, '2021_02_17_122130_create_tags_table', 1),
+(6, '2021_02_25_125031_create_forms_table', 2),
+(7, '2021_02_27_103416_create_request_forms_table', 3);
 
 -- --------------------------------------------------------
 
@@ -139,6 +164,32 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `request_forms`
+--
+
+DROP TABLE IF EXISTS `request_forms`;
+CREATE TABLE `request_forms` (
+  `id` bigint UNSIGNED NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `requested` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `request_forms`
+--
+
+INSERT INTO `request_forms` (`id`, `username`, `phone`, `email`, `requested`, `created_at`, `updated_at`) VALUES
+(1, 'Иван Иванов', '+7 (495) 987-6543', 'ivan@ivan.ru', 'Запрашиваю данные из каталога 1,2 и 3 на выгрузку.', '2021-02-27 08:09:44', '2021-02-27 08:09:44'),
+(2, 'Павел Павлов', '+7(499)999-99-99', 'pavel@pavlov.ru', 'Запрашиваю на выгрузку данные из 5 и 6 каталогов.', '2021-02-27 08:17:21', '2021-02-27 08:17:21'),
+(3, 'Кирилл Кириллов', '+7(985)123-3211', 'kirill@kirillov.ru', 'Запрос материалов из каталогов 5 и 13.', '2021-02-27 12:55:44', '2021-02-27 12:55:44');
 
 -- --------------------------------------------------------
 
@@ -226,6 +277,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Индексы таблицы `forms`
+--
+ALTER TABLE `forms`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `migrations`
 --
 ALTER TABLE `migrations`
@@ -236,6 +293,13 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Индексы таблицы `request_forms`
+--
+ALTER TABLE `request_forms`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `request_forms_email_unique` (`email`);
 
 --
 -- Индексы таблицы `tags`
@@ -273,10 +337,22 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `forms`
+--
+ALTER TABLE `forms`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `request_forms`
+--
+ALTER TABLE `request_forms`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `tags`
