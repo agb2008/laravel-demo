@@ -25,6 +25,7 @@ class FormController extends Controller
 
     public function store()
     {
+        $this->validateRequestForm();
         $form = new Form();
 
         $form->username = request('username');
@@ -32,12 +33,20 @@ class FormController extends Controller
 
         $form->save();
 
-        return redirect('/'); // заменить на список комментариев
+        return redirect('/forms'); // заменить на список комментариев
     }
 
     public function show(Form $form)
     {
         return view('forms.show', ['form' => $form]);
+    }
+
+    protected function validateRequestForm()
+    {
+        return request()->validate([
+            'username' => 'required|min:3',
+            'comment' => 'required'
+        ]);
     }
 }
 

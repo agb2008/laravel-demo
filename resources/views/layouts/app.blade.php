@@ -37,13 +37,13 @@
                         <a class="navbar-item {{ Request::path() === 'about' ? 'current_page_item' : ''}}" href="/about" accesskey="3" title="">About us</a>
                         <a class="navbar-item {{ Request::path() === 'articles' ? 'current_page_item' : ''}}" href="/articles" accesskey="4" title="">Articles</a>
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">More</a>
+                            <a class="navbar-link">Forms</a>
                             <div class="navbar-dropdown">
-                                <a class="navbar-item">Contact us</a>
-                                <a class="navbar-item">Jobs</a>
-                                <a class="navbar-item">Map</a>
+                                <a class="navbar-item" href="/forms" title="">Basic forms</a>
+                                <a class="navbar-item" href="/forms/create" title="">Create basic form</a>
                                 <hr class="navbar-divider">
-                                <a class="navbar-item">Report an issue</a>
+                                <a class="navbar-item" href="/request_form" title="">Request forms</a>
+                                <a class="navbar-item" href="/request_form/create" title="">Create request</a>
                             </div>
                         </div>
                     </div>

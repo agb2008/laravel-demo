@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="wrapper" style="margin: 45px auto 20px;">
+<div id="wrapper" style="margin: 90px auto 20px;">
     <div id="page" class="container">
         <h1 class="heading has-text-weight-bold is-size-4">Форма обратной связи</h1>
 
@@ -16,6 +16,7 @@
             <div class="control">
                 <input
                     type="text"
+                    placeholder="Имя Фамилия"
                     class="input @error('username') is-danger @enderror"
                     name="username"
                     id="username"
@@ -32,6 +33,7 @@
             <div class="control">
                 <textarea
                     name="comment"
+                    placeholder="Текст комментария"
                     id="comment"
                     class="textarea @error('comment') is-danger @enderror"
                 >{{ old('comment') }}</textarea>
