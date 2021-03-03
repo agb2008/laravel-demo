@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 28 2021 г., 19:07
+-- Время создания: Мар 03 2021 г., 19:52
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.14
 
@@ -55,7 +55,12 @@ INSERT INTO `articles` (`id`, `user_id`, `title`, `excerpt`, `body`, `created_at
 (7, 2, 'Ex nihil mollitia possimus maxime reprehenderit.', 'Ipsum illum nobis qui tenetur quia quia.', 'Rem est voluptatem odio perspiciatis similique cupiditate nulla. Ut velit rem distinctio sunt aut quia. Perspiciatis facere maiores facilis necessitatibus. Aut est nemo eligendi ex dolores reprehenderit. Placeat eum error sint laboriosam officia voluptates tenetur.', '2021-02-17 10:05:29', '2021-02-17 10:05:29'),
 (8, 2, 'Aliquid velit culpa sunt sunt tenetur iste.', 'Quo doloremque cupiditate adipisci pariatur expedita.', 'Nihil officiis consequuntur ab ea corporis sed. Quibusdam totam molestiae culpa perspiciatis voluptas nulla enim perspiciatis. Voluptatem animi ut tempora eos est sed enim molestiae. Consequatur natus aperiam modi a occaecati.', '2021-02-17 10:05:29', '2021-02-17 10:05:29'),
 (9, 1, 'asdf', 'asdf', 'asdf', '2021-02-17 13:28:51', '2021-02-17 13:28:51'),
-(10, 1, 'Просто еще одна замечательная статья о Laravel', 'Небольшой заголовок', 'И, конечно, сам текст статьи. Он значительно больше заголовка.', '2021-02-17 13:38:13', '2021-02-17 13:38:13');
+(10, 1, 'Просто еще одна замечательная статья о Laravel', 'Небольшой заголовок', 'И, конечно, сам текст статьи. Он значительно больше заголовка.', '2021-02-17 13:38:13', '2021-02-17 13:38:13'),
+(16, 9, 'Minima aperiam vero repudiandae eos laboriosam.', 'Majesty,\' he began. \'You\'re a very fine day!\' said a whiting before.\' \'I can tell you how it was indeed: she was not much surprised at her as she ran. \'How surprised he\'ll be when he pleases!\'.', 'Alice; \'living at the bottom of a well?\' The Dormouse again took a great hurry; \'and their names were Elsie, Lacie, and Tillie; and they lived at the March Hare had just begun \'Well, of all the things I used to come once a week: HE taught us Drawling, Stretching, and Fainting in Coils.\' \'What was THAT like?\' said Alice. \'Well, then,\' the Gryphon remarked: \'because they lessen from day to such stuff? Be off, or I\'ll kick you down stairs!\' \'That is not said right,\' said the Caterpillar. \'Well, perhaps your feelings may be different,\' said Alice; not that she wasn\'t a bit afraid of them!\' \'And.', '2021-03-03 16:46:50', '2021-03-03 16:46:54'),
+(17, 11, 'Nisi ducimus facere quod totam iusto.', 'It means much the most important piece of bread-and-butter in the prisoner\'s handwriting?\' asked another of the jury consider their verdict,\' the King hastily said, and went on in a moment like a.', 'I suppose Dinah\'ll be sending me on messages next!\' And she began thinking over other children she knew, who might do something better with the grin, which remained some time without interrupting it. \'They were learning to draw, you know--\' \'What did they live at the proposal. \'Then the words did not like the look of it at all,\' said the Rabbit\'s voice; and Alice was beginning to feel which way you can;--but I must have been changed several times since then.\' \'What do you like the largest telescope that ever was! Good-bye, feet!\' (for when she next peeped out the Fish-Footman was gone, and.', '2021-03-03 16:46:51', '2021-03-03 16:46:55'),
+(18, 1, 'Iure voluptas earum ut maxime sit non.', 'Cat, and vanished again. Alice waited patiently until it chose to speak first, \'why your cat grins like that?\' \'It\'s a pun!\' the King said to herself, (not in a helpless sort of way, \'Do cats eat.', 'Rabbit\'s voice; and the baby at her feet in the air, I\'m afraid, sir\' said Alice, surprised at her with large round eyes, and feebly stretching out one paw, trying to explain the mistake it had been. But her sister kissed her, and she went on, very much what would happen next. \'It\'s--it\'s a very respectful tone, but frowning and making quite a new idea to Alice, flinging the baby joined):-- \'Wow! wow! wow!\' \'Here! you may stand down,\' continued the Hatter, and here the Mock Turtle said: \'no wise fish would go anywhere without a great hurry. An enormous puppy was looking up into a.', '2021-03-03 16:46:52', '2021-03-03 16:46:56'),
+(19, 4, 'Doloremque et qui dolor dolorem.', 'Everything is so out-of-the-way down here, and I\'m sure she\'s the best of educations--in fact, we went to him,\' the Mock Turtle sighed deeply, and began, in a hurried nervous manner, smiling at.', 'Dormouse again, so she went on, \'that they\'d let Dinah stop in the air. This time Alice waited a little, \'From the Queen. \'It proves nothing of the Lizard\'s slate-pencil, and the whole thing, and she put them into a sort of use in knocking,\' said the Queen, who was beginning to write out a race-course, in a long, low hall, which was lit up by two guinea-pigs, who were giving it a violent blow underneath her chin: it had grown so large a house, that she let the Dormouse said--\' the Hatter added as an explanation. \'Oh, you\'re sure to make herself useful, and looking anxiously about her. \'Oh.', '2021-03-03 16:46:52', '2021-03-03 16:46:57'),
+(20, 10, 'Ut voluptatem sit sunt rerum eaque tenetur odit.', 'BEG your pardon!\' she exclaimed in a court of justice before, but she heard was a little different. But if I\'m Mabel, I\'ll stay down here! It\'ll be no use in waiting by the officers of the trees.', 'I\'ll come up: if not, I\'ll stay down here till I\'m somebody else\"--but, oh dear!\' cried Alice, quite forgetting in the kitchen. \'When I\'M a Duchess,\' she said this, she noticed that one of the teacups as the White Rabbit: it was impossible to say it over) \'--yes, that\'s about the crumbs,\' said the last few minutes, and began to repeat it, but her head on her hand, and made another snatch in the pool, \'and she sits purring so nicely by the officers of the game, the Queen said--\' \'Get to your places!\' shouted the Queen. \'I never could abide figures!\' And with that she tipped over the list.', '2021-03-03 16:46:53', '2021-03-03 16:46:57');
 
 -- --------------------------------------------------------
 
@@ -84,7 +89,13 @@ INSERT INTO `article_tag` (`id`, `article_id`, `tag_id`, `created_at`, `updated_
 (12, 9, 2, '2021-02-17 13:28:51', '2021-02-17 13:28:51'),
 (13, 9, 3, '2021-02-17 13:28:51', '2021-02-17 13:28:51'),
 (14, 10, 1, '2021-02-17 13:38:13', '2021-02-17 13:38:13'),
-(15, 10, 2, '2021-02-17 13:38:13', '2021-02-17 13:38:13');
+(15, 10, 2, '2021-02-17 13:38:13', '2021-02-17 13:38:13'),
+(16, 16, 4, '2021-03-03 16:49:41', '2021-03-03 16:49:42'),
+(17, 17, 3, '2021-03-03 16:50:08', '2021-03-03 16:50:09'),
+(18, 18, 4, '2021-03-03 16:50:25', '2021-03-03 16:50:26'),
+(19, 19, 3, '2021-03-03 16:50:39', '2021-03-03 16:50:40'),
+(20, 20, 4, '2021-03-03 16:50:54', '2021-03-03 16:50:55'),
+(21, 20, 3, '2021-03-03 16:51:11', '2021-03-03 16:51:11');
 
 -- --------------------------------------------------------
 
@@ -322,13 +333,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `article_tag`
 --
 ALTER TABLE `article_tag`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
