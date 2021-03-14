@@ -1,7 +1,4 @@
-@extends('layout')
-
-@section('content')
-
+<x-master>
 <div id="wrapper" style="margin: 45px auto 20px;">
     <div id="page" class="container">
         <h1 class="heading has-text-weight-bold is-size-4">New Article</h1>
@@ -10,7 +7,7 @@
             @csrf
 
             <div class="field">
-                <label for="title" class="label">Title</label>
+                <label for="title" class="label">Заголовок</label>
             </div>
 
             <div class="control">
@@ -27,7 +24,7 @@
             </div>
 
             <div class="field">
-                <label for="excerpt" class="label">Excerpt</label>
+                <label for="excerpt" class="label">Краткое содержание</label>
             </div>
             <div class="control">
                 <textarea
@@ -41,7 +38,7 @@
             </div>
 
             <div class="field">
-                <label for="body" class="label">Body</label>
+                <label for="body" class="label">Текст новости</label>
             </div>
             <div class="control">
                 <textarea
@@ -55,7 +52,7 @@
             </div>
 
             <div class="field">
-                <label for="tag" class="label">Tags</label>
+                <label for="tag" class="label">Тэги</label>
             </div>
             <div class="select is-multiple control">
                 <select
@@ -74,12 +71,11 @@
 
             <div class="field is-grouped">
                 <div class="control" style="margin-top: 10px;">
-                    <button class="button is-link" type="submit">Submit</button>
+                    <button class="button is-link" type="submit">Сохранить</button>
                 </div>
             </div>
 
         </form>
     </div>
 </div>
-
-@endsection
+</x-master>

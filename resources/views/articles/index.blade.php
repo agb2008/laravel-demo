@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-master>
     <section class="column is-two-thirds ld-top" style="margin-top: 80px;">
         @forelse($articles as $article)
         <article class="notification">
@@ -13,4 +11,4 @@
             <p>No relevant articles yet.</p>
         @endforelse
     </section>
-@endsection
+</x-master>

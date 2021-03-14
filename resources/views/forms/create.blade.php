@@ -1,7 +1,4 @@
-@extends('layout')
-
-@section('content')
-
+<x-master>
 <div id="wrapper" style="margin: 90px auto 20px;">
     <div id="page" class="container">
         <h1 class="heading has-text-weight-bold is-size-4">Форма обратной связи</h1>
@@ -51,5 +48,4 @@
         </form>
     </div>
 </div>
-
-@endsection
+</x-master>

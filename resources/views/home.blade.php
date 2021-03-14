@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-master>
     <div class="container" style="margin: 70px auto 20px;">
         <div class="columns is-marginless is-centered mt-2 mb-2">
             <div class="column is-7">
@@ -18,4 +16,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-master>

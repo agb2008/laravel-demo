@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-master>
     <section class="section about-us" style="margin-top: 45px;">
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-7">
@@ -62,4 +60,4 @@
             </div>
         </div>
     </section>
-@endsection
+</x-master>

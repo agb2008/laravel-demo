@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-master>
     <section class="column is-two-thirds ld-top" style="margin-top: 80px;">
             <article class="notification">
                 <h2 class="title is-2">{{ $article->title }}</h2>
@@ -14,4 +12,4 @@
                 </p>
             </article>
     </section>
-@endsection
+</x-master>

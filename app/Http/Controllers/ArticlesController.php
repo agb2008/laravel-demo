@@ -44,7 +44,7 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validateArticle();
+        $this->validateArticle( );
         $article = new Article(request(['title','excerpt','body']));
 
         $article->user_id = 1; // auth()->id() or auth()->user()->articles()->create($article)
@@ -108,6 +108,6 @@ class ArticlesController extends Controller
             'excerpt' => 'required',
             'body' => 'required',
             'tags' => 'exists:tags,id'    // check that tag exist on tags table with id as prime check
-        ]);
+        ],[],Article::attributeNames());
     }
 }

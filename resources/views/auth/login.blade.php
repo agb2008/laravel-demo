@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
-
+<x-master>
     <section class="hero is-primary" style="margin: 70px auto 20px;">
         <div class="hero-body">
             <div class="container">
@@ -101,4 +98,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-master>

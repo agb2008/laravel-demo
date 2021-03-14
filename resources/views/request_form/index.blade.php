@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-master>
     <section class="column is-two-thirds ld-top" style="margin-top: 80px;">
         @forelse($request_forms as $request_form)
         <article class="notification">
@@ -13,4 +11,4 @@
             <p>Пока не создано ни одного запроса.</p>
         @endforelse
     </section>
-@endsection
+</x-master>

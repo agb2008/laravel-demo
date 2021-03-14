@@ -32,4 +32,14 @@ class Article extends Model
     {
         return $this->belongsToMany(Tag::class)->withTimestamps();
     }
+
+    static function attributeNames()
+    {
+        return [
+            'title' => '"Заголовок"',
+            'excerpt' => '"Краткое содержание"',
+            'body' => '"Текст новости"',
+            'tags' => '"Тэги"'
+        ];
+    }
 }

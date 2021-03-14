@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+<x-master>
 @section('content')
 
 
@@ -69,4 +68,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-master>

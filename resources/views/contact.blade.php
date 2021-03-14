@@ -1,7 +1,5 @@
-@extends('layout')
-
-@section('content')
+<x-master>
 
   <h1>Hello World - Contact Section</h1>
 
-@endsection
+</x-master>
