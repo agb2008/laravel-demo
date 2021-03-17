@@ -12,6 +12,11 @@
                     <div class="card-content">
                         You are logged in!
                     </div>
+
+                    <div class="box">
+                        <a href="{{ route('articles.index', ['user' => auth()->user()->getAuthIdentifier()]) }}" class="button is-primary">Мои публикации</a>
+                        <a href="{{ "/articles/create" }}" class="button is-primary">Новая публикация</a>
+                    </div>
                 </nav>
             </div>
         </div>

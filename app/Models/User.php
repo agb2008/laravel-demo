@@ -41,6 +41,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function myarticles()
+    {
+        return Article::whereIn('user_id', $this->id)->latest()->get();
+    }
+
     public function articles()
     {
         return $this->hasMany(Article::class);

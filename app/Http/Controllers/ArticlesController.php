@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -17,7 +18,9 @@ class ArticlesController extends Controller
     {
         if (request('tag')) {
             $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
-        } else {
+        } else if (request('user')) {
+            $articles = User::where('id', request('user'))->firstOrFail()->articles;
+            } else {
             $articles = Article::latest()->get();
         }
 
@@ -63,6 +66,8 @@ class ArticlesController extends Controller
      */
     public function show(Article $article)
     {
+
+        // dd(auth()->user()->getAuthIdentifier());
         return view('articles.show', ['article' => $article]);
     }
 

@@ -2,7 +2,7 @@
 
     <div id="wrapper"  style="margin: 45px auto 20px;">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
+            <h1 class="heading has-text-weight-bold is-size-4" style="margin: 70px auto 20px;">Update Article</h1>
 
             <form method="POST" action="/articles/{{ $article->id }}">
                 @csrf
