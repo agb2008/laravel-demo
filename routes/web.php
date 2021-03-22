@@ -41,6 +41,10 @@ Route::post('/request_form', [RequestFormController::class, 'store']);
 Route::get('/request_form/create', [RequestFormController::class, 'create']);
 Route::get('/request_form/{request_form}', [RequestFormController::class, 'show'])->name('request_form.show');
 
+Route::get('/auth/social', [LoginController::class, 'show'])->name('social.login');
+Route::get('/oauth/{driver}', [LoginController::class, 'redirectToProvider'])->name('social.oauth');
+Route::get('/oauth/{driver}/callback', [LoginController::class, 'handleProviderCallback'])->name('social.callback');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

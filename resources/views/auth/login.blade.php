@@ -93,6 +93,34 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label"></div>
+
+                            <div class="field-body">
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <a href="{{ route('social.oauth', 'facebook') }}" class="button is-primary">
+                                            Login with Facebook
+                                        </a>
+                                    </div>
+
+                                    <div class="control">
+                                        <a href="{{ route('social.oauth', 'github') }}" class="button is-primary">
+                                            Login with Github
+                                        </a>
+                                    </div>
+
+                                    <div class="control">
+                                        <a href="{{ route('social.oauth', 'google') }}" class="button is-primary">
+                                            Login with Google
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
