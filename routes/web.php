@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\RequestFormController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ParserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,9 @@ Route::get('/request_form/{request_form}', [RequestFormController::class, 'show'
 Route::get('/auth/social', [LoginController::class, 'show'])->name('social.login');
 Route::get('/oauth/{driver}', [LoginController::class, 'redirectToProvider'])->name('social.oauth');
 Route::get('/oauth/{driver}/callback', [LoginController::class, 'handleProviderCallback'])->name('social.callback');
+
+Route::get('/parser', [ParserController::class, 'index'])->name('parser');
+Route::post('/parser/store', [ParserController::class, 'store']);
 
 Auth::routes();
 
