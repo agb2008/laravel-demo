@@ -3,7 +3,7 @@
             <article class="notification">
                 <h2 class="title is-2">{{ $article->title }}</h2>
                 <p class="subtitle is-4"><img src="/images/banner.jpg" alt="" class="image image-full" />
-                    {{ $article->body }}
+                    {!! $article->body !!}
                 </p>
                 <p style="margin-top: 1em;">
                     @foreach ($article->tags as $tag)

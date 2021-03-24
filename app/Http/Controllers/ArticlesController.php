@@ -50,7 +50,7 @@ class ArticlesController extends Controller
         $this->validateArticle( );
         $article = new Article(request(['title','excerpt','body']));
 
-        $article->user_id = 1; // auth()->id() or auth()->user()->articles()->create($article)
+        $article->user_id = auth()->id(); // auth()->id() or auth()->user()->articles()->create($article) user_id = 1;
         $article->save();
 
         $article->tags()->attach(request('tags'));

@@ -9,17 +9,10 @@
                 <p class="subtitle is-8">
                     {{ $item['pubDate'] }}
                 </p>
-                @auth
-                    <form method="POST" action="/parser/store">
-                        @csrf
-                        <input type="hidden" name="title" value="{{ $item['title'] }}">
-                        <input type="hidden" name="link" value="{{ $item['link'] }}">
-                        <input type="hidden" name="guid" value="{{ $item['guid'] }}">
-                        <input type="hidden" name="description" value="{{ $item['description'] }}">
-                        <input type="hidden" name="pubDate" value="{{ $item['pubDate'] }}">
-                        <button class="button is-link" type="submit">Сохранить</button>
-                    </form>
-                @endauth
+
+                @if($item->user_id === auth()->user()->getAuthIdentifier())
+                    <a href="{{ $item->path() . '/edit' }}" class="button is-primary">Edit</a>
+                @endif
             </article>
         @empty
             <p>No news yet.</p>

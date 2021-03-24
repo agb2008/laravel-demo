@@ -6,6 +6,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\RequestFormController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ParserController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,10 @@ Route::get('/oauth/{driver}/callback', [LoginController::class, 'handleProviderC
 
 Route::get('/parser', [ParserController::class, 'index'])->name('parser');
 Route::post('/parser/store', [ParserController::class, 'store']);
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{item}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/news/{item}/edit', [NewsController::class, 'edit']);
+Route::put('/news/{item}', [NewsController::class, 'update']);
 
 Auth::routes();
 

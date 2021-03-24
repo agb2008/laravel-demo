@@ -20,6 +20,8 @@ class CreateNewsTable extends Migration
             $table->string('guid');
             $table->text('description');
             $table->string('pubDate');
+            $table->integer('user_id')->nullable();
+            $table->integer('category_id')->nullable();
             $table->timestamps();
         });
     }

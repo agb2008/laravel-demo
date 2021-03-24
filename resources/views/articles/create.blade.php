@@ -1,4 +1,6 @@
 <x-master>
+{{--    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>--}}
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 <div id="wrapper" style="margin: 45px auto 20px;">
     <div id="page" class="container">
         <h1 class="heading has-text-weight-bold is-size-4" style="margin: 70px auto 20px;">New Article</h1>
@@ -78,4 +80,8 @@
         </form>
     </div>
 </div>
+{{--    <script src="{{ asset('vendor/ckeditor/ckeditor/ckeditor.js') }}"></script>--}}
+    <script>
+        CKEDITOR.replace( 'body' );
+    </script>
 </x-master>

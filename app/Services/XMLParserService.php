@@ -3,8 +3,10 @@
 
 namespace App\Services;
 
+use App\Models\News;
 use Illuminate\Support\Facades\Storage;
 use Orchestra\Parser\Xml\Facade as XmlParser;
+use Illuminate\Contracts\Auth\Authenticatable;
 
 
 class XMLParserService
@@ -31,11 +33,30 @@ class XMLParserService
             ],
         ]);
 
-//        dump($data);
+        $counter=0;
 
-        $fileName = sprintf('Logs%s.txt',time() . rand(0, 10000));
-//        Storage::disk('publicLogs')->append('log.txt', date('c') . ' ' . $link);
-        Storage::disk('publicLogs')->put($fileName, $link);
+        foreach ($data['news'] as $item) {
+
+            $news = News::query()->firstOrNew(['title' => $item['title']]);
+
+            if ($news->id) {
+                continue;
+            } else {
+                $news = new News();
+                $news->title = $item['title'];
+                $news->link = $item['link'];
+                $news->guid = $item['guid'];
+                $news->description = $item['description'];
+                $news->pubDate = $item['pubDate'];
+                $news->user_id = 1;
+
+                $news->save();
+                $counter++;
+            }
+        }
+
+        //$fileName = sprintf('Logs%s.txt',time() . rand(0, 10000));
+        //Storage::disk('publicLogs')->put($fileName, $link);
+        Storage::disk('publicLogs')->append('log.txt', date('c') . ' ' . $link);
     }
-
 }

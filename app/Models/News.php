@@ -9,5 +9,12 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'link', 'guid', 'description', 'pubDate'];
+    protected $fillable = ['title', 'link', 'guid', 'description', 'pubDate', 'user_id', 'category_id'];
+
+    public function path()
+    {
+        return route('news.show', $this);
+    }
+
+
 }

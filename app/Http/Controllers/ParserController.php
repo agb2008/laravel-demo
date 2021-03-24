@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 //use Orchestra\Parser\Xml\Facade as XmlParser;
 //use App\Services\XMLParserService;
 use App\Jobs\NewsParsing;
@@ -12,29 +12,6 @@ class ParserController extends Controller
 {
     public function index()
     {
-//        public function index(XMLParserService $parserService)
-//        $xml = XmlParser::load('https://news.yandex.ru/computers.rss');
-//
-//        $data = $xml->parse([
-//            'title' => [
-//                'uses' => 'channel.title'
-//            ],
-//            'link' => [
-//                'uses' => 'channel.link'
-//            ],
-//            'description' => [
-//                'uses' => 'channel.description'
-//            ],
-//            'image' => [
-//                'uses' => 'channel.image.url'
-//            ],
-//            'news' => [
-//                'uses' => 'channel.item[title,link,guid,description,pubDate]'
-//            ],
-//        ]);
-
-        // dump($data['news']);
-
         $start = date('c');
         $rssLinks = [
             'https://news.yandex.ru/auto.rss',
@@ -57,13 +34,13 @@ class ParserController extends Controller
 
         foreach ($rssLinks as $link) {
 //            $parserService->saveNews($link);
-//
-            NewsParsing::dispatch($link);
+              NewsParsing::dispatch($link);
         }
 
 //        return view('news.index', ['news' => $data['news']]);
+//        return $start . ' ' . date('c');
 
-        return $start . ' ' . date('c');
+        return redirect(route('news.index'));
     }
 
     public function store()
@@ -79,7 +56,7 @@ class ParserController extends Controller
 
         $item->save();
 
-        return redirect('/');
+        return redirect(route('news.index'));
     }
 
     protected function validateRequestNews()

@@ -10,6 +10,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use ReflectionProperty;
+use Symfony\Component\Console\Logger\ConsoleLogger;
 
 class NewsParsing implements ShouldQueue
 {
