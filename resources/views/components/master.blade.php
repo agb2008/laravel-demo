@@ -33,9 +33,16 @@
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item {{ Request::path() === '/' ? 'current_page_item' : ''}}" href="/home" accesskey="1" title="">Homepage</a>
-                <a class="navbar-item {{ Request::path() === 'parser' ? 'current_page_item' : ''}}" href="/parser" accesskey="2" title="">Parser</a>
                 <a class="navbar-item {{ Request::path() === 'about' ? 'current_page_item' : ''}}" href="/about" accesskey="3" title="">About us</a>
                 <a class="navbar-item {{ Request::path() === 'articles' ? 'current_page_item' : ''}}" href="/articles" accesskey="4" title="">Articles</a>
+                @auth()
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">News</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/parser" title="">Parser</a>
+                        <a class="navbar-item" href="/news" title="">News list</a>
+                    </div>
+                </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">Forms</a>
                     <div class="navbar-dropdown">
@@ -46,6 +53,7 @@
                         <a class="navbar-item" href="/request_form/create" title="">Create request</a>
                     </div>
                 </div>
+                @endauth
             </div>
 
             <div class="navbar-end">
